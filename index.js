@@ -1,10 +1,10 @@
 const express = require("express");
 const app = express();
 
-app.get("/", res => {
+app.get("/", (req, res) => {
   return res.json(["Homer", "Marge", "Bart", "Lisa", "Maggie"]);
 });
 
-app.listen(3000, () => {
-  console.log("Server running on port 3000");
+app.listen(5555, () => {
+  console.log("Server running on port 5555");
 });
