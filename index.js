@@ -5,10 +5,12 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 app.get("/", (req, res) => {
-  const character = process.env.CHARACTER
+  const character = process.env.CHARACTER;
   return res.json(["Homer", "Marge", "Bart", "Lisa", "Apu", character]);
 });
 
-app.listen(process.env.PORT, () => {
-  console.log("Server running on port 5555");
+const port = process.env.PORT;
+
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
 });
