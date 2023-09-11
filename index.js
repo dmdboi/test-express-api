@@ -9,6 +9,6 @@ app.get("/", (req, res) => {
   return res.json(["Homer", "Marge", "Bart", "Lisa", "Apu", character]);
 });
 
-app.listen(5555, () => {
+app.listen(process.env.PORT, () => {
   console.log("Server running on port 5555");
 });
