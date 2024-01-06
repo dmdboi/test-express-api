@@ -1,0 +1,16 @@
+version: '3.8'
+
+networks:
+  express-net:
+    driver: bridge
+
+services:
+  quake:
+    container_name: express
+    image: express:latest
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    networks:
+      - express-net
